@@ -9,6 +9,9 @@
     "studio": "npx prisma studio",
     "dev": "cls && nodemon server.js"
   },
+  "prisma": {
+    "seed": "node seed.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rafael-1108/catalogo_filmesMarvel.git"
