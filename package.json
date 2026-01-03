@@ -1,0 +1,30 @@
+{
+  "name": "catalogo_filmesmarvel",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "studio": "npx prisma studio",
+    "dev": "cls && nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-1108/catalogo_filmesMarvel.git"
+  },
+  "keywords": ["catalogo_filmesMarvel"],
+  "author": "Rafael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rafael-1108/catalogo_filmesMarvel/issues"
+  },
+  "homepage": "https://github.com/Rafael-1108/catalogo_filmesMarvel#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^7.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
