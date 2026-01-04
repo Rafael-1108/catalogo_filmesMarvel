@@ -5,3 +5,5 @@ const router = Router();
 
 router.get("/", FilmeController.listarTodos);
 router.get("/:id", FilmeController.listarUm);
+
+export default router;
