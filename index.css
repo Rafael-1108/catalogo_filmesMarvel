@@ -1,8 +1,15 @@
+.header {
+    max-height: 300px;
+    color: gray;
+}
+
 .logo {
     display: block;
     margin: 0 auto;
+    width: 20%;
 }
 
 .fundo {
-    
+    height: auto;
+    width: 105%;
 }
