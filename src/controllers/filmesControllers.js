@@ -52,3 +52,39 @@ export const listarUm = async (req,res) => {
         })
     }
 }
+
+export const buscarPorNome = async (req, res) => {
+    try {
+        const { nome } = req.query;
+
+        if (!nome) {
+            return res.status(400).json({
+                erro: 'Parâmetro inválido',
+                mensagem: 'O parâmetro "nome" é obrigatório na URL.'
+            });
+        }
+        
+        const filmes = await FilmesModels.findByName(nome);
+
+        if (!filmes || filmes.length === 0) {
+            return res.status(404).json({
+                total: 0,
+                mensagem: `Nenhum filme encontrado com o nome: "${nome}".`,
+                filmes: []
+            });
+        }
+
+        res.status(200).json({
+            total: filmes.length,
+            mensagem: 'Filmes encontrados com sucesso.',
+            filmes
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            erro: 'Erro ao buscar filme por nome',
+            detalhes: error.message,
+            status: 500
+        });
+    }
+}
