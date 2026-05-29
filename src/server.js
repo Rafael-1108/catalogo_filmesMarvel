@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import filmesRoutes from './src/routes/filmesRoutes.js';
+import filmesRoutes from './routes/filmesRoutes.js';
+import { apiKey } from './lib/middlewares/apiKey.js';
 
 const app = express();
 app.use(express.json());
@@ -12,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("🚀 Servidor funcionando...");
 });
 
-app.use('/filmes', filmesRoutes);
+app.use('/filmes', apiKey, filmesRoutes);
 
 app.listen(serverPort, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${serverPort} 🚀`);
