@@ -1,13 +1,13 @@
 {
   "name": "catalogo_filmesmarvel",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node src/server.js",
     "studio": "npx prisma studio",
-    "dev": "cls && nodemon server.js"
+    "dev": "cls && nodemon src/server.js"
   },
   "prisma": {
     "seed": "node seed.js"
